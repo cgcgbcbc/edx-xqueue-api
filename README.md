@@ -22,11 +22,11 @@ var api = new EdxQueueApi('http://xqueue.example.com','queue_name');
 MIT © [Guang Chen](https://github.com/cgcgbcbc)
 
 
-[npm-image]: https://badge.fury.io/js/edx-queue-api.svg
-[npm-url]: https://npmjs.org/package/edx-queue-api
-[travis-image]: https://travis-ci.org/cgcgbcbc/edx-queue-api.svg?branch=master
-[travis-url]: https://travis-ci.org/cgcgbcbc/edx-queue-api
-[daviddm-image]: https://david-dm.org/cgcgbcbc/edx-queue-api.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/cgcgbcbc/edx-queue-api
-[coveralls-image]: https://coveralls.io/repos/cgcgbcbc/edx-queue-api/badge.svg
-[coveralls-url]: https://coveralls.io/r/cgcgbcbc/edx-queue-api
+[npm-image]: https://badge.fury.io/js/edx-xqueue-api.svg
+[npm-url]: https://npmjs.org/package/edx-xqueue-api
+[travis-image]: https://travis-ci.org/cgcgbcbc/edx-xqueue-api.svg?branch=master
+[travis-url]: https://travis-ci.org/cgcgbcbc/edx-xqueue-api
+[daviddm-image]: https://david-dm.org/cgcgbcbc/edx-xqueue-api.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/cgcgbcbc/edx-xqueue-api
+[coveralls-image]: https://coveralls.io/repos/cgcgbcbc/edx-xqueue-api/badge.svg
+[coveralls-url]: https://coveralls.io/r/cgcgbcbc/edx-xqueue-api
