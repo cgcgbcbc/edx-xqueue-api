@@ -1,9 +1,9 @@
 {
-  "name": "edx-queue-api",
+  "name": "edx-xqueue-api",
   "version": "0.0.0",
   "description": "Api for edx xqueue",
   "homepage": "",
-  "repository": "cgcgbcbc/edx-queue-api",
+  "repository": "cgcgbcbc/edx-xqueue-api",
   "author": {
     "name": "Guang Chen",
     "email": "cgcgbcbc@gmail.com",
@@ -35,5 +35,9 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.3.0",
+    "request": "^2.64.0"
+  }
 }
