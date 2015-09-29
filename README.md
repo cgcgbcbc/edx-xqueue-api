@@ -12,9 +12,9 @@ $ npm install --save edx-queue-api
 ## Usage
 
 ```js
-var edxQueueApi = require('edx-queue-api');
+var EdxQueueApi = require('edx-queue-api');
 
-edxQueueApi('Rainbow');
+var api = new EdxQueueApi('http://xqueue.example.com','queue_name');
 ```
 
 ## License
