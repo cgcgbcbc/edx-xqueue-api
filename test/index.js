@@ -8,6 +8,7 @@ const USERNAME = 'LMS_USERNAME';
 const PASSWORD = 'LMS_PASSWORD';
 const ID = 'SUBMISSION_ID';
 const KEY = 'SUBMISSION_KEY';
+const CI = 'CI';
 
 const url = process.env[URL];
 const queue = process.env[QUEUE];
@@ -18,11 +19,10 @@ const submissionKey = process.env[KEY];
 
 describe('edx-queue-api', function () {
   let helper = context;
-  if (process.env['CI']) {
+  if (process.env[CI]) {
     helper = context.skip;
   }
   helper('test api', () => {
-    "use strict";
     it('should login', (done) => {
       let xqueue = new EdxQueueApi(url, queue);
       xqueue.login(username, password, (err, res, body) => {
@@ -30,7 +30,7 @@ describe('edx-queue-api', function () {
           assert.isNull(err);
           assert.equal(body.return_code, 0);
           done();
-        } catch(e) {
+        } catch (e) {
           done(e);
         }
       });
@@ -40,7 +40,7 @@ describe('edx-queue-api', function () {
       before((done) => {
         xqueue = new EdxQueueApi(url, queue);
         xqueue.login(username, password, (err, res, body) => {
-          if (err != null) {
+          if (err !== null || body.return_code !== 0) {
             done(err);
           } else {
             done();
@@ -52,7 +52,7 @@ describe('edx-queue-api', function () {
           try {
             assert.equal(body.return_code, 0);
             done();
-          } catch(e) {
+          } catch (e) {
             done(e);
           }
         });
@@ -62,17 +62,17 @@ describe('edx-queue-api', function () {
           try {
             assert.equal(body.return_code, 1);
             done();
-          } catch(e) {
+          } catch (e) {
             done(e);
           }
         });
       });
       it('should put result', (done) => {
-        xqueue.putResult(submissionId, submissionKey, true, 1, "test", (err, res, body) => {
+        xqueue.putResult(submissionId, submissionKey, true, 1, 'test', (err, res, body) => {
           try {
             assert.equal(body.return_code, 0);
             done();
-          } catch(e) {
+          } catch (e) {
             done(e);
           }
         });
