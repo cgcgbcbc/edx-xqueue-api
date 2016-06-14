@@ -66,5 +66,5 @@ gulp.task('babel', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('prepublish', ['nsp', 'babel']);
+gulp.task('prepublish', [ 'babel']);
 gulp.task('default', ['static', 'test', 'coveralls']);
